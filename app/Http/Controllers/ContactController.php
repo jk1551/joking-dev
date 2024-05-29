@@ -18,7 +18,7 @@ class ContactController extends Controller
         $data = [
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
-            'messages' => $validatedData['message'],
+            'messages' => $validatedData['messages'],
         ];
 
         Mail::send('emails.contact', $data, function ($message) use ($data) {

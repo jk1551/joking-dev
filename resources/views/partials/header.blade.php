@@ -13,6 +13,7 @@
             <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
                 <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500" href="{{ url('/') }}" aria-current="page">Home</a>
                 <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500" href="{{ url('/blog') }}">Blog</a>
+                <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500" href="{{ url('/contact') }}" aria-current="page">Contact</a>
                 <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500" href="{{ asset('Joseph_King_Resume.pdf') }}" target="_blank">Resume</a>
                 @auth
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
