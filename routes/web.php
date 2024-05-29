@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogPostController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('home');
@@ -24,6 +25,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact.form');
+
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
 
 
 
